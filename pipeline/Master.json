@@ -35,7 +35,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"url": "https://prod-19.northcentralus.logic.azure.com:443/workflows/af18dc39bdb348f6b514c14e5782af9d/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=QBHHSrOvaVO_FOBPS0zMAGSA0kAIO9HCk63QZt37aJc",
+					"url": "https://prod-02.northcentralus.logic.azure.com:443/workflows/405c4dd9c5dc470e8c3bd77723b68a6a/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=FaZudnNBx4GhslKvhFZH0fMnjd3gA8PHNmJUDZiUbD4",
 					"method": "POST",
 					"body": {
 						"value": "{\n    \"title\": \"@{activity('Execute Pipeline1').output.pipelineName} SUCCEEDED!\",\n    \"message\": \"Pipeline run finished successfully!\",\n    \"color\": \"Green\",\n    \"dataFactoryName\": \"@{pipeline().DataFactory}\",\n    \"pipelineName\": \"@{activity('Execute Pipeline1').output.pipelineName}\",\n    \"pipelineRunId\": \"@{activity('Execute Pipeline1').output.pipelineRunId}\",\n    \"time\": \"@{utcnow()}\"\n}",
@@ -63,7 +63,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"url": "https://prod-19.northcentralus.logic.azure.com:443/workflows/af18dc39bdb348f6b514c14e5782af9d/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=QBHHSrOvaVO_FOBPS0zMAGSA0kAIO9HCk63QZt37aJc",
+					"url": "https://prod-02.northcentralus.logic.azure.com:443/workflows/405c4dd9c5dc470e8c3bd77723b68a6a/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=FaZudnNBx4GhslKvhFZH0fMnjd3gA8PHNmJUDZiUbD4",
 					"method": "POST",
 					"body": {
 						"value": "{\n    \"title\": \"@{activity('Execute Pipeline1').output.pipelineName} FAILED!\",\n    \"message\": \"Error: @{activity('Execute Pipeline1').error.message}\",\n    \"color\": \"Red\",\n    \"dataFactoryName\": \"@{pipeline().DataFactory}\",\n    \"pipelineName\": \"@{activity('Execute Pipeline1').output.pipelineName}\",\n    \"pipelineRunId\": \"@{activity('Execute Pipeline1').output.pipelineRunId}\",\n    \"time\": \"@{utcnow()}\"\n }",
