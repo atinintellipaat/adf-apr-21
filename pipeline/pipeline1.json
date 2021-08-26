@@ -18,7 +18,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "@Select TableName, WaterMarkValue From dbo.watermarktable WHERE TableName = pipeline().parameters.TableName",
+							"value": "Select TableName, WaterMarkValue From dbo.watermarktable WHERE TableName = pipeline().parameters.TableName",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
