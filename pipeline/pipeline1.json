@@ -42,7 +42,10 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT max(@{pipeline().parameters.WaterMarkColumn}) AS NewWaterMarkValue FROM @{pipeline().parameters.TableName}",
+						"sqlReaderQuery": {
+							"value": "SELECT max(@{pipeline().parameters.WaterMarkColumn}) AS NewWaterMarkValue FROM @{pipeline().parameters.TableName}",
+							"type": "Expression"
+						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
