@@ -87,7 +87,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "SELECT * From pipeline().parameters.TableName Where pipeline().parameters.WaterMarkColumn> '@{activity('lkpOldWaterMarkValue').output.firstRow.WaterMarkValue}' AND \npipeline().parameters.WaterMarkColumn<= '@{activity('lkpNewWaterMarkValue').output.firstRow.NewWaterMarkValue}'",
+							"value": "SELECT * From @{pipeline().parameters.TableName} Where @{pipeline().parameters.WaterMarkColumn} > '@{activity('lkpOldWaterMarkValue').output.firstRow.WaterMarkValue}' AND \n@{pipeline().parameters.WaterMarkColumn} <= '@{activity('lkpNewWaterMarkValue').output.firstRow.NewWaterMarkValue}'\n",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
